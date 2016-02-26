@@ -25,7 +25,7 @@ public class SomeCodeTest {
     @Test
     public void testNeww() throws Exception {
         Author author = new SomeCode().neww();
-        assertTrue(author.getName().equals("Dummy"));
+        assertTrue(author.getName().equals("Sample"));
         assertTrue(author.getLastname().equals("Author"));
     }
 

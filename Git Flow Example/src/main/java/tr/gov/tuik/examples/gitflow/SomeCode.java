@@ -7,7 +7,7 @@ package tr.gov.tuik.examples.gitflow;
 public class SomeCode {
 
     public Author neww() {
-        return new Author("Dummy", "Author");
+        return new Author("Sample", "Author");
     }
 
     public Author create(String name, String lastname) {

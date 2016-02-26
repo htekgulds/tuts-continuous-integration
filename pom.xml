@@ -6,7 +6,7 @@
 
     <groupId>tr.gov.tuik.examples</groupId>
     <artifactId>continuous-integration</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <modules>
         <module>Git Flow Example</module>
     </modules>
