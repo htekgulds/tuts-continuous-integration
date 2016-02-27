@@ -1,6 +1,15 @@
+<!--<?link rel="stylesheet" type="text/css" href="/css/app.css" ?>-->
 <zk>
-    <div id="body" apply="tr.gov.tuik.examples.zkgitflow.controller.FirstPageController">
-        <label id="lblHello" value="Hello!" />
+    <style src="/css/app.css" />
+    <div id="body" sclass="body" apply="tr.gov.tuik.examples.zkgitflow.controller.FirstPageController">
+        <div>
+            <textbox id="tbName" placeholder="Write your name..." width="220px" tabindex="1" />
+        </div>
+        <separator />
+        <div>
+            <label id="lblHello" value="Hello!" />
+        </div>
+        <separator />
         <button id="btnHello" label="Click Me!"/>
     </div>
 </zk>

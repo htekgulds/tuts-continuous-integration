@@ -5,6 +5,7 @@ import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zul.Label;
+import org.zkoss.zul.Textbox;
 
 /**
  * Created by Hasan TEKGÜL
@@ -14,9 +15,13 @@ public class FirstPageController extends SelectorComposer<Component> {
 
     @Wire
     private Label lblHello;
+    @Wire
+    private Textbox tbName;
 
     @Listen("onClick = #btnHello")
     public void onClickBtnHello() {
-        lblHello.setValue("HELLO WORLD!!!");
+        String name = tbName.getValue();
+        lblHello.setValue("Hello, " + name + "!!!");
+        tbName.setValue("");
     }
 }

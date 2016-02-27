@@ -6,7 +6,9 @@ import org.junit.Test;
 import org.zkoss.zats.mimic.ComponentAgent;
 import org.zkoss.zats.mimic.DesktopAgent;
 import org.zkoss.zats.mimic.Zats;
+import org.zkoss.zats.mimic.operation.InputAgent;
 import org.zkoss.zul.Label;
+import org.zkoss.zul.Textbox;
 
 import static org.junit.Assert.*;
 
@@ -30,10 +32,13 @@ public class FirstPageControllerTest {
     public void testOnClickBtnHello() throws Exception {
         DesktopAgent desktop = Zats.newClient().connect("/pages/first-page.zul");
 
+        ComponentAgent textbox = desktop.query("#tbName");
         ComponentAgent button = desktop.query("#btnHello");
         ComponentAgent label = desktop.query("#lblHello");
 
+        textbox.type("Hasan");
         button.click();
-        assertEquals("HELLO WORLD!!!", label.as(Label.class).getValue());
+        assertEquals("Hello, Hasan!!!", label.as(Label.class).getValue());
+        assertEquals("", textbox.as(Textbox.class).getValue());
     }
 }
