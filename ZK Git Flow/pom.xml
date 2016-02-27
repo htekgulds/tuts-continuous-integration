@@ -3,11 +3,12 @@
     <parent>
         <artifactId>continuous-integration</artifactId>
         <groupId>tr.gov.tuik.examples</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>${project.version}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>zk-git-flow</artifactId>
     <properties>
+        <java.version>1.7</java.version>
         <zk.version>8.0.1</zk.version>
         <zats-version>1.2.0</zats-version>
         <commons-io>2.4</commons-io>
@@ -93,8 +94,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.3.2</version>
                 <configuration>
-                    <source>1.5</source>
-                    <target>1.5</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                 </configuration>
             </plugin>
             <!-- Build war -->
@@ -102,6 +103,21 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <groupId>org.apache.maven.plugins</groupId>
                 <version>2.1.1</version>
+            </plugin>
+            <!-- JRebel -->
+            <plugin>
+                <groupId>org.zeroturnaround</groupId>
+                <artifactId>jrebel-maven-plugin</artifactId>
+                <version>1.1.5</version>
+                <executions>
+                    <execution>
+                        <id>generate-rebel-xml</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
