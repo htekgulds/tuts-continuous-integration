@@ -1,0 +1,6 @@
+<zk>
+    <div id="body" apply="tr.gov.tuik.examples.zkgitflow.controller.FirstPageController">
+        <label id="lblHello" value="Hello!" />
+        <button id="btnHello" label="Click Me!"/>
+    </div>
+</zk>
