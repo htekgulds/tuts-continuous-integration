@@ -21,7 +21,7 @@ public class FirstPageController extends SelectorComposer<Component> {
     @Listen("onClick = #btnHello")
     public void onClickBtnHello() {
         String name = tbName.getValue();
-        lblHello.setValue("Hello, " + name + "!!!");
+        lblHello.setValue("Whazzup, " + name + "!!!");
         tbName.setValue("");
     }
 }

@@ -30,7 +30,7 @@ public class FirstPageControllerTest {
 
     @Test
     public void testOnClickBtnHello() throws Exception {
-        DesktopAgent desktop = Zats.newClient().connect("/pages/first-page.zul");
+        DesktopAgent desktop = Zats.newClient().connectAsIncluded("/pages/first-page.zul", null);
 
         ComponentAgent textbox = desktop.query("#tbName");
         ComponentAgent button = desktop.query("#btnHello");
@@ -38,7 +38,7 @@ public class FirstPageControllerTest {
 
         textbox.type("Hasan");
         button.click();
-        assertEquals("Hello, Hasan!!!", label.as(Label.class).getValue());
+        assertEquals("Whazzup, Hasan!!!", label.as(Label.class).getValue());
         assertEquals("", textbox.as(Textbox.class).getValue());
     }
 }
