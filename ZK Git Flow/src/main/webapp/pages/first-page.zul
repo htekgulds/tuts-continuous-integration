@@ -10,6 +10,6 @@
             <label id="lblHello" value="Hello!" />
         </div>
         <separator />
-        <button id="btnHello" label="Click Me!"/>
+        <button id="btnHello" label="Click here!"/>
     </div>
 </zk>
