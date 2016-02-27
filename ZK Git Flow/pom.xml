@@ -3,12 +3,13 @@
     <parent>
         <artifactId>continuous-integration</artifactId>
         <groupId>tr.gov.tuik.examples</groupId>
-        <version>1.1-SNAPSHOT</version>
+        <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>zk-git-flow</artifactId>
     <properties>
         <zk.version>8.0.1</zk.version>
+        <zats-version>1.2.0</zats-version>
         <commons-io>2.4</commons-io>
     </properties>
     <packaging>war</packaging>
@@ -66,6 +67,21 @@
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
             <version>${commons-io}</version>
+        </dependency>
+
+        <!-- TEST -->
+        <dependency>
+            <groupId>org.zkoss.zats</groupId>
+            <artifactId>zats-mimic-ext7</artifactId>
+            <version>${zats-version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
     <build>
